@@ -3,8 +3,8 @@ package com.bridgelabz.linecomparison;
 import java.util.Scanner;
 
 /**
- * Program to check which line is equal, greater or less than the other line
- * using Java compareTo method
+ * Object Oriented Programming Concepts of Line and Point as well as equals and
+ * compareTo methods
  * 
  * @author : Snehal Patil
  *
@@ -33,7 +33,17 @@ public class LineComparison {
 		return length;
 	}
 
-	// Method for compare length of lines
+	// Method to check two lines equal or not
+	public static void equalsMethod() {
+		if (lengthFirst.equals(lengthSecond)) {
+			System.out.println("The length of lines are equals");
+		} else {
+			System.out.println("The length of lines are not equals");
+		}
+		System.out.println();
+	}
+
+	// Method for to check is first line equal, greater or less than the other line
 	public static void compareToMehod() {
 		int check = lengthFirst.compareTo(lengthSecond);
 		if (check == 0) {
@@ -56,9 +66,8 @@ public class LineComparison {
 		System.out.println("For second line");
 		lengthSecond = Length_Calculation();
 
-		/*
-		 * Calling compareToMehod() method to check length of two lines are equal or not
-		 */
+		// Calling Compare methods
+		equalsMethod();
 		compareToMehod();
 	}
 }
