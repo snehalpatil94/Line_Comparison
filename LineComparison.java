@@ -3,13 +3,14 @@ package com.bridgelabz.linecomparison;
 import java.util.Scanner;
 
 /**
- * Program to check equality of two lines Java equals method
+ * Program to check which line is equal, greater or less than the other line
+ * using Java compareTo method
  * 
  * @author : Snehal Patil
  *
  */
 public class LineComparison {
-	/// use Wrapper class to use equals method
+	// Use Wrapper class to use equals method
 	static Double lengthFirst = 0.0d;
 	static Double lengthSecond = 0.0d;
 
@@ -33,12 +34,14 @@ public class LineComparison {
 	}
 
 	// Method for compare length of lines
-	public static void lengthComparison() {
-		if (lengthFirst.equals(lengthSecond)) {
-			System.out.println("The length of lines are equal");
-		} else {
-			System.out.println("The length of lines are not equal");
-		}
+	public static void compareToMehod() {
+		int check = lengthFirst.compareTo(lengthSecond);
+		if (check == 0) {
+			System.out.println("The length of line 1 is equals to line 2");
+		} else if (check > 0) {
+			System.out.println("The length of line 1 is greater than  line 2");
+		} else
+			System.out.println("The length of line 1 is less than line 2");
 	}
 
 	public static void main(String[] args) {
@@ -54,9 +57,8 @@ public class LineComparison {
 		lengthSecond = Length_Calculation();
 
 		/*
-		 * Calling lengthComparison() method to check length of two lines are equal or
-		 * not
+		 * Calling compareToMehod() method to check length of two lines are equal or not
 		 */
-		lengthComparison();
+		compareToMehod();
 	}
 }
